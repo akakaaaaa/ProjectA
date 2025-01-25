@@ -10,7 +10,6 @@ html, body {
     padding: 0;
 }   
 
-
 p {
     
     opacity: 90%;
@@ -25,8 +24,6 @@ p {
 h1 {
     margin: 0;
 }
-
-
 
 .hero h1 {
     font-size: 62px;
@@ -210,7 +207,7 @@ a {
 
 .inner-div-img3 {
     width: 50%;
-    background-image: url('./assets/images/image-not-average-desktop.webp');
+    background-image: url('./assets/images/components.jpg');
     border-radius: 16px;
     background-position: center;
     background-repeat: no-repeat;
@@ -277,7 +274,7 @@ a {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    width: 250px;
+    max-width: 250px;
 }
 
 .number-div {
@@ -402,6 +399,14 @@ footer h1 {
     font-size: 62px;
 }
 
+footer a {
+    color: white;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
 .read-more {
     background-color: #FFF5EF;
     width: 100%;
@@ -434,4 +439,174 @@ iframe {
     width: 1200px;
     height: 700px;
     border-radius: 16px;
+}
+
+.plan {
+    height: min-content;
+}
+
+
+.plan-item {
+    margin-bottom: 10px;
+
+}
+
+@media (max-width: 1200px) and (min-width: 768px) {
+    .inner-div-img1 {
+        display: none;
+    }
+
+    .hero {
+        justify-content: center;
+    }
+
+    .inner-div-text {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .inner-div-text p {
+        width: 80%;
+    }
+
+    iframe {
+        width: 90%;
+    }
+
+    .first-div, .second-div {
+        width: 90%;
+    }
+
+    .team {
+        max-width: 90%;
+    }
+
+    footer h1 {
+        text-align: center;
+    }
+
+    .team {
+        height: min-content;
+    }
+
+    .team-cards {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .plan {
+        height: min-content;
+    }
+
+    .plan-items {
+        flex-direction: column;
+        height: min-content;
+    }
+
+    .plan-item svg {
+        display: none;
+    }
+
+    .plan-item {
+        justify-content: center;
+    }
+    .plan-item-inner {
+        flex-direction: row;
+        width: fit-content;
+    }
+    .number-div {
+        min-width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .inner-div-img1 {
+        display: none;
+    }
+
+    .hero {
+        justify-content: center;
+    }
+
+    .inner-div-text {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    iframe {
+        width: 90%;
+    }
+
+    .first-div, .second-div {
+        flex-direction: column;
+        width: 90%;
+        height: min-content !important;
+    }
+
+    .first-div p, .second-div p {
+        font-size: 16px;
+    }
+
+    .inner-div-text2, .inner-div-text3 {
+        height: 50%;
+        width: 100%;
+        gap: 20px;
+        height: min-content;
+    }
+
+    .inner-div-img2, .inner-div-img3 {
+        height: 50%;
+        width: 100%;
+    }
+
+    .inner-div-text2 h1, .inner-div-text1 h1 {
+        font-size: 32px;
+    }
+
+    footer h1 {
+        text-align: center;
+        font-size: 36px;
+    }
+
+    .plan {
+        height: min-content;
+    }
+
+    .plan-items {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .plan-item {
+        margin-bottom: 10px;
+    }
+
+    .plan-item svg {
+        display: none;
+    }
+
+    .team {
+        height: min-content;
+    }
+
+    .team-cards {
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 90%;
+    }
+
+    .plan-item-inner {
+        flex-direction: row;
+        width: fit-content;
+    }
+    .number-div {
+        min-width: 40px;
+        height: 40px;
+    }
+
 }

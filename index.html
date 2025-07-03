@@ -22,8 +22,94 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
 
     <title>Moving Platform</title>
+
+    <style>
+      a {
+        text-decoration: none;
+      }
+      .active {
+        color: #005bbb; /* Bright blue color for active tab */
+        font-weight: 700; /* Make active tab text bold */
+        border-bottom: 2px solid #005bbb; /* Blue underline */
+        padding-bottom: 4px; /* Space between text and underline */
+      }
+      .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: #ffffff;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+        z-index: 1000;
+      }
+
+      .navbar-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 16px 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .navbar-logo {
+        font-size: 21px;
+        font-weight: 700;
+        color: #222;
+        text-decoration: none;
+      }
+
+      .navbar-links {
+        list-style: none;
+        display: flex;
+        gap: 30px;
+      }
+
+      .navbar-links li a {
+        text-decoration: none;
+        color: #444;
+        font-weight: 500;
+        font-size: 1rem;
+        position: relative;
+        transition: color 0.2s ease;
+      }
+
+      .navbar-links li a:hover,
+      .navbar-links li a.active {
+        color: #005bbb;
+      }
+
+      .container {
+        padding-top: 100px;
+      }
+
+      @media (max-width: 768px) {
+        .navbar-links {
+          gap: 20px;
+        }
+
+        .navbar-content {
+          flex-direction: row;
+          align-items: center;
+        }
+
+        .navbar-logo {
+          margin-bottom: 8px;
+        }
+      }
+    </style>
   </head>
+
   <body>
+    <nav class="navbar">
+      <div class="navbar-content">
+        <a href="index.html" class="navbar-logo">Moving Platform</a>
+        <ul class="navbar-links">
+          <li><a class="active" href="./index.html">მთავარი</a></li>
+          <!-- <li><a href="./team.html">გუნდი</a></li> -->
+          <li><a href="./components.html">კომპონენტები</a></li>
+        </ul>
+      </div>
+    </nav>
     <div class="container">
       <div class="background">
         <div class="hero">
@@ -204,6 +290,14 @@
         <div class="inner-div-img2"></div>
       </div>
 
+      <div class="blockdiagram">
+        <h1>ბლოკ დიაგრამა</h1>
+        <img
+          src="/assets/images/Screenshot 2025-07-01 at 16.24.19.png"
+          alt=""
+        />
+      </div>
+
       <div class="plan">
         <h1>ჩვენი გეგმა</h1>
         <div class="plan-items">
@@ -301,21 +395,21 @@
               <p class="name">აკაკი წიფურია</p>
               <p class="gabrieli">
                 დოკუმენტაცია, პროექტის ვებსაიტის შექმნა და ESP-სთან
-                დაკავშირებული კოდის შემუშავება.
+                დაკავშირებული კოდის შემუშავება და რობოტის აწყობაში მონაწილეობა.
               </p>
             </div>
-            <a class="read-more" href="">Read More</a>
+            <a class="read-more" href="teamMember1.html">Read More</a>
           </div>
           <div class="team-members">
             <img src="./assets/images/avatar-logo1.png" alt="" />
             <div class="inner-team">
               <p class="name">ალექსანდრე ტყაბლაძე</p>
               <p class="gabrieli">
-                რობოტის კომპონენტებზე მუშაობა და ESP-სთან დაკავშირებული კოდის
-                შემუშავება.
+                რობოტის კომპონენტებზე მუშაობა, ESP-სთან დაკავშირებული კოდის
+                შემუშავება და დოკუმენტაციის დამუშავებაში მონაწილეობა.
               </p>
             </div>
-            <a class="read-more" href="">Read More</a>
+            <a class="read-more" href="teamMember2.html">Read More</a>
           </div>
         </div>
       </div>
@@ -345,7 +439,8 @@
             class="copyright-p"
             >© 2025 – დოკუმენტაცია</a
           >
-          <a class="copyright-p" href="">ლაბორატორიული სამუშაოები</a>
+          <a class="presentation" href="">პროგრესის ანგარიში</a>
+
           <a
             class="presentation"
             href="https://docs.google.com/presentation/d/1g7j73-w9aQRwOjxTaRUzcgd_0KmuJY05VB9E977Xrgg/edit#slide=id.g32a3ee39116_0_2"

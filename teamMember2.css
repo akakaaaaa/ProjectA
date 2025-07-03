@@ -1,0 +1,199 @@
+.navbar-links li a.active {
+  color: #005bbb; /* Bright blue color for active tab */
+  font-weight: 700; /* Make active tab text bold */
+  /* This part was missing from your inline style, but present in your main style.css */
+  position: relative;
+  padding-bottom: 8px; /* Added some padding to make space for the underline */
+}
+.navbar-links li a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0; /* Position at the bottom of the link */
+  width: 100%;
+  height: 2px;
+  background-color: #005bbb; /* Blue underline */
+  border-radius: 2px;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+}
+
+.navbar-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  font-size: 21px;
+  font-weight: 700;
+  color: #222;
+  text-decoration: none;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+  font-size: 1rem;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+/* Note: I'm keeping this for hover, but the JS will add 'active' for current page */
+.navbar-links li a:hover {
+  color: #005bbb;
+}
+
+.container {
+  padding-top: 100px;
+}
+
+@media (max-width: 768px) {
+  .navbar-links {
+    gap: 20px;
+  }
+
+  .navbar-content {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .navbar-logo {
+    margin-bottom: 8px;
+  }
+}
+
+/* Existing styles from teamMember1.css (re-pasted here for a complete file) */
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base Styles */
+body {
+  font-family: "Martian Mono", monospace;
+  font-style: normal;
+  background-color: #f0f2f5;
+  color: #1f1f1f;
+  line-height: 1.8;
+  padding-top: 90px;
+  padding-bottom: 20px;
+}
+
+h2,
+h1,
+p {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+p {
+  width: 100%;
+}
+
+/* Container */
+.member-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  display: flex;
+
+  align-items: flex-start;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding-top: 100px; /* Adjust this to make space for the fixed navbar */
+}
+
+.read-more {
+  background-color: #fff5ef;
+  width: 100%;
+  height: min-content;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 8px;
+  border: 2px solid #062630;
+  color: #062630;
+  transition: box-shadow 0.3s ease;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 18px;
+}
+a {
+  text-decoration: none;
+}
+
+.read-more:hover {
+  box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Profile Photo */
+.member-photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Text Content */
+.member-text {
+  flex: 1;
+  min-width: 260px;
+}
+
+.member-name {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #111;
+}
+
+.member-role {
+  font-size: 1.2rem;
+  color: #666;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.member-description {
+  font-size: 1.05rem;
+  color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .member-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* Adjusted for centered text on mobile */
+  }
+
+  .member-text {
+    padding-top: 20px;
+  }
+
+  .member-name {
+    font-size: 1.8rem;
+  }
+}

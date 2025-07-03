@@ -68,6 +68,20 @@ a {
   text-decoration: none;
 }
 
+.blockdiagram {
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.blockdiagram img {
+  width: 100%;
+}
+
 .container {
   width: 100%;
   display: flex;

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ka">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>კომპონენტების აღწერა</title>
+
+    <link rel="icon" href="./assets/images/iliauni.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #f4f6f8; /* slightly softer background */
+        font-family: "Inter", sans-serif;
+        color: #1e1e1e;
+        font-family: "Martian Mono", monospace;
+        font-style: normal;
+
+        /* deeper, richer text */
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 40px auto;
+        padding: 0 20px;
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 2.4rem;
+        margin-bottom: 40px;
+        font-weight: 800;
+        color: #0d1b2a; /* dark blue-black for contrast */
+      }
+
+      .component-card {
+        background-color: #ffffff;
+        border-radius: 16px;
+        box-shadow: 0 8px 24px rgba(13, 27, 42, 0.06); /* darker tint */
+        margin-bottom: 40px;
+        padding: 30px;
+        display: flex;
+        gap: 30px;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        transition: box-shadow 0.3s ease;
+      }
+
+      .component-card:hover {
+        box-shadow: 0 12px 36px rgba(13, 27, 42, 0.12); /* stronger blue-black shadow */
+      }
+
+      .component-image {
+        flex: 1 1 300px;
+        max-width: 300px;
+        border-radius: 12px;
+        object-fit: cover;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1); /* slightly stronger */
+      }
+
+      .component-text {
+        flex: 2 1 500px;
+      }
+
+      .component-title {
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: #1a237e; /* deep indigo */
+      }
+
+      .component-description {
+        font-size: 1rem;
+        line-height: 1.8;
+        white-space: pre-line;
+        color: #3e4a59; /* modern muted gray */
+      }
+
+      @media (max-width: 768px) {
+        .component-card {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+
+        .component-text {
+          padding-top: 20px;
+        }
+      }
+      .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: #ffffff;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+        z-index: 1000;
+      }
+
+      .navbar-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 16px 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .navbar-logo {
+        font-size: 24px;
+        font-weight: 700;
+        color: #222;
+        text-decoration: none;
+      }
+
+      .navbar-links {
+        list-style: none;
+        display: flex;
+        gap: 30px;
+      }
+
+      .navbar-links li a {
+        text-decoration: none;
+        color: #444;
+        font-weight: 500;
+        font-size: 1rem;
+        position: relative;
+        transition: color 0.2s ease;
+      }
+
+      .navbar-links li a:hover,
+      .navbar-links li a.active {
+        color: #005bbb;
+      }
+
+      .navbar-links li a.active::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        width: 100%;
+        height: 2px;
+        background-color: #005bbb;
+        border-radius: 2px;
+      }
+
+      .container {
+        padding-top: 100px;
+      }
+
+      @media (max-width: 768px) {
+        .navbar-links {
+          gap: 20px;
+        }
+
+        .navbar-content {
+          flex-direction: row;
+          align-items: center;
+        }
+
+        .navbar-logo {
+          margin-bottom: 8px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="navbar-content">
+        <a href="/index.html" class="navbar-logo">Moving Platform</a>
+        <ul class="navbar-links">
+          <li><a href="/index.html">მთავარი</a></li>
+          <!-- <li><a href="/team.html">გუნდი</a></li> -->
+          <li><a class="active" href="/components.html">კომპონენტები</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h1>კომპონენტების აღწერა</h1>
+
+      <div class="component-card">
+        <img
+          src="./assets/images/raspberry.png"
+          alt="Raspberry Pi 5"
+          class="component-image"
+        />
+        <div class="component-text">
+          <h2 class="component-title">Raspberry Pi 5</h2>
+          <p class="component-description">
+            Raspberry Pi 5 წარმოადგენს უახლეს და ტექნოლოგიურად განვითარებულ
+            ერთბორდიან კომპიუტერს, რომელიც შექმნილია ფართო სპექტრის
+            გამოყენებისთვის, დაწყებული საგანმანათლებლო მიზნებიდან, დამთავრებული
+            პროფესიონალური ინდუსტრიული და საინჟინრო გადაწყვეტილებებით. ეს
+            პლატფორმა განსაკუთრებით პოპულარულია ელექტრონიკის მოყვარულებსა და
+            ინჟინრებში, რადგან ის იდეალურია პროტოტიპირების, ჩაშენებული
+            (Embedded) სისტემების, რობოტიკის, ავტომატიზაციისა და IoT
+            პროექტებისთვის. ტექნიკური მახასიათებლები: Raspberry Pi 5 აღჭურვილია
+            თანამედროვე ოთხბირთვიანი ARM Cortex-A76 პროცესორით, რომლის სიხშირე
+            2.4GHz-მდე აღწევს. ეს საგრძნობლად აუმჯობესებს მისი საერთო მუშაობის
+            პროდუქტიულობას წინა მოდელებთან შედარებით. ასევე, მოწყობილობა შეიცავს
+            გაუმჯობესებულ VideoCore VII GPU-ს, რაც უზრუნველყოფს 4K გრაფიკის
+            დამუშავებას, მაღალი რეზოლუციის ვიდეოს გაშვებას და გრაფიკულ
+            ინტერფეისებთან უკეთეს მუშაობას. ოპერატიული მეხსიერების კუთხით,
+            Raspberry Pi 5-ს აქვს განსხვავებული ვერსიები, რომელთა RAM მოცულობა
+            4GB ან 8GB LPDDR4X-3200 მეხსიერებამდე აღწევს. ეს საშუალებას იძლევა,
+            ერთბორდიან კომპიუტერს გაუმკლავდეს ბევრად უფრო რთულ ამოცანებს,
+            როგორიცაა მონაცემთა დამუშავება, მრავალფანჯრიანი ინტერფეისები,
+            სამრეწველო ავტომატიზაცია ან სენსორული ინფორმაციის მართვა რეალურ
+            დროში. PCIe მხარდაჭერა ერთ-ერთი მთავარი ინოვაციაა Raspberry Pi 5-ზე,
+            რაც მომხმარებლებს საშუალებას აძლევს, გააფართოონ სისტემის
+            შესაძლებლობები მძლავრი დამატებითი მოწყობილობებით, მაგალითად, NVMe
+            SSD-ებით, მაღალი სიჩქარის მონაცემთა გადაცემისთვის ან სხვა
+            პროფესიონალური მოდულებით. მოწყობილობა გთავაზობთ USB 3.0, USB 2.0,
+            Gigabit Ethernet-ს, ორი micro HDMI პორტს 4K გამოსახულებისთვის, 40
+            GPIO პინს, რომელიც აუცილებელია გარე სენსორების, რელეების, მოტორების,
+            სერვო სისტემებისა და სხვა ელექტრონული კომპონენტების მართვისთვის.
+          </p>
+        </div>
+      </div>
+
+      <div class="component-card">
+        <img
+          src="./assets/images/esp.png"
+          alt="ESP32S-WROOM-32"
+          class="component-image"
+        />
+        <div class="component-text">
+          <h2 class="component-title">ESP32S-WROOM-32</h2>
+          <p class="component-description">
+            ESP32S-WROOM-32 წარმოადგენს მაღალმახასიათებლიან და მრავალფუნქციურ
+            კონტროლერს, რომელიც აერთიანებს Wi-Fi, Bluetooth და Bluetooth Low
+            Energy (BLE) კავშირის ტექნოლოგიებს ერთ კომპაქტურ პლატფორმაზე.
+            აღნიშნული მოდული შემუშავებულია კომპანია Espressif Systems-ის მიერ და
+            განკუთვნილია სხვადასხვა ტიპის ჩაშენებული და ქსელური სისტემებისთვის,
+            მათ შორის ინტერნეტ ნივთების (IoT) გადაწყვეტებისთვის, ინდუსტრიული
+            ავტომატიზაციისთვის, რობოტიკისთვის, ჭკვიანი ენერგეტიკისა და სენსორული
+            სისტემებისთვის. მოდულს გააჩნია ინტეგრირებული SPI Flash მეხსიერება,
+            რომელიც აუცილებელია ოპერაციული კოდის შენახვისა და სწრაფი ჩატვირთვის
+            პროცესისთვის. ESP32S-WROOM-32 ასევე გამოირჩევა მრავალფუნქციური
+            შეყვანა/გამოყვანის პინების (GPIO) არსებობით, რაც უზრუნველყოფს მისი
+            ეფექტურ ინტეგრაციას სხვადასხვა ელექტრონულ მოწყობილობასთან, მათ შორის
+            სენსორებთან, აქტუატორებთან, ეკრანებთან, ძრავებთან და სხვა ჩაშენებულ
+            სისტემებთან. დამატებით, მოდული მხარს უჭერს ისეთ პოპულარულ
+            პროტოკოლებს, როგორიცაა SPI, I2C, UART, PWM, ADC, DAC, რაც კიდევ უფრო
+            აფართოებს მის გამოყენების შესაძლებლობებს. პროექტში ვიყენებთ ორ
+            ESP32S-WROOM-32 კონტროლერს. ორივე კონტროლერს თავისი დანიშნულება
+            აქვს. პირველი და მთავარი კონტროლერი ESP32(MOTOR) გამოყენებული იქნება
+            კომუნიკაციისთვისა და ძრავების სამართავად, ESP32(HALL) მიიღებს და
+            გასცემს ჰოლ სენსორისგან მიღებულ ინფორმაციას მთავარ ESP32(MOTOR)
+            კონტროლერს.
+          </p>
+        </div>
+      </div>
+
+      <div class="component-card">
+        <img
+          src="./assets/images/bts7960.jpg"
+          alt="ESP32S-WROOM-32"
+          class="component-image"
+        />
+        <div class="component-text">
+          <h2 class="component-title">BTS7960 Motor driver</h2>
+          <p class="component-description">
+            არსებული ძრავების დრაივერების შეზღუდული შესაძლებლობებისა და
+            არაეფექტურობის გამო, გუნდის მიერ მიღებულ იქნა გადაწყვეტილება,
+            ჩაენაცვლოს არსებული კონტროლერები უფრო მაღალხარისხიანი და საიმედო
+            ალტერნატიული მოდულით, რომელიც უკეთ პასუხობს ჩვენს სისტემურ
+            მოთხოვნებს და დიდ დატვირთვებზეა გათვლილი. ამ მიზნით, არჩეული იქნა
+            BTS7960 ტიპის ძრავის დრაივერის მოდული, რომელიც პრაქტიკულად ერთ-ერთი
+            ყველაზე ფართოდ გამოყენებადი და ეფექტიანი გადაწყვეტაა DC ძრავების
+            მართვისთვის. BTS7960 წარმოადგენს ორგამი H-ხიდის მქონე ძრავის
+            დრაივერის მოდულს, რომელიც განკუთვნილია მაღალი სიმძლავრის DC ძრავების
+            ეფექტური და საიმედო სამართავად. მისი კონსტრუქცია და ტექნიკური
+            მახასიათებლები საშუალებას იძლევა, იგი წარმატებით იყოს გამოყენებული
+            ისეთ სფეროებში, როგორიცაა რობოტიკა, ინდუსტრიული ავტომატიზაცია,
+            ტრანსპორტირების სისტემა, მექატრონიკა და სხვა მაღალენერგეტიკული
+            ჩაშენებული სისტემები. მოდული დაფუძნებულია BTS7960B ჩიპზე, რომელიც
+            იყენებს ინტეგრირებულ ორმაგ H-ხიდის არქიტექტურას, რაც მნიშვნელოვნად
+            ზრდის მართვის სიზუსტეს და ეფექტიანობას, განსაკუთრებით ისეთ
+            სისტემებში, სადაც საჭიროა ძრავის ორმხრივი ბრუნვის უზრუნველყოფა და
+            სიჩქარის ზუსტი რეგულირება.
+          </p>
+        </div>
+      </div>
+
+      <div class="component-card">
+        <img
+          src="./assets/images/xl4015.jpg"
+          alt="ESP32S-WROOM-32"
+          class="component-image"
+        />
+        <div class="component-text">
+          <h2 class="component-title">XL4015 Buck Converter</h2>
+          <p class="component-description">
+            XL4015 Buck Converter წარმოადგენს მაღალეფექტურობით გამორჩეულ DC-DC
+            გადამყვან მოდულს, რომელიც სპეციალურად შექმნილია მაღალი შეყვანის
+            ძაბვის შემცირებისთვის უფრო დაბალ და სტაბილურ გამომავალ ძაბვამდე.
+            აღნიშნული ტიპის გადამყვანი განსაკუთრებით აქტიურად გამოიყენება იმ
+            მოწყობილობებში, სადაც ელექტრონულ კომპონენტებს ან მიკროკონტროლერებს
+            ფუნქციონირებისთვის სჭირდებათ დაბალი ძაბვის სტაბილური წყარო, ხოლო
+            ძირითადი კვების წყარო გაცილებით მაღალი ძაბვისაა. XL4015-ის ტიპიური
+            გამოყენების მაგალითია სისტემა, სადაც გვაქვს 12 ვოლტიანი კვების
+            წყარო, ხოლო კონტროლერი ან სხვა კომპონენტები საჭიროებენ მხოლოდ 5
+            ვოლტს. მსგავსი სიტუაცია ხშირია რობოტიკაში, ჩაშენებულ სისტემებში,
+            პორტატულ მოწყობილობებში, კომუნიკაციის მოდულებში ან ნებისმიერი ტიპის
+            სენსორულ პლატფორმებზე, სადაც სხვადასხვა კომპონენტებს განსხვავებული
+            სამუშაო ძაბვა სჭირდებათ. Raspberry PI 5 - ის კვებაზე ფიქრის დროს
+            წავაწყდით ზუსტად ანალოგიურ პრობლემას, რამაც XL4045 - მდე მიგვიყვანა.
+          </p>
+        </div>
+      </div>
+
+      <div class="component-card">
+        <img
+          src="./assets/images/motor.jpg"
+          alt="ESP32S-WROOM-32"
+          class="component-image"
+        />
+        <div class="component-text">
+          <h2 class="component-title">12V DC Motor</h2>
+          <p class="component-description">
+            რობოტის გადაადგილების უზრუნველსაყოფად პროექტში გამოყენებულია ოთხი
+            ცალი 12 ვოლტიანი MD36 Encoder ტიპის DC ძრავი, რომლებიც გამოირჩევიან
+            მაღალი სიზუსტით, სანდოობითა და გამძლეობით. აღნიშნული ძრავების
+            მთავარი თავისებურება არის ის, რომ თითოეული მათგანი აღჭურვილია
+            ინკრემენტული ტიპის როტაციული ენკოდერით(Hall Sensor), რომელიც
+            უზრუნველყოფს ბრუნვის კუთხის, სიჩქარისა და პოზიციის ზუსტ კონტროლს,
+            რაც აუცილებელია რობოტის კინემატიკური სისტემის ეფექტური მუშაობისთვის.
+            1:27 აღნიშვნა აღნიშნავს ძრავში ინტეგრირებულ გადაცემათა კოლოფის
+            გადაბმულობის კოეფიციენტს, რაც ნიშნავს, რომ ძრავის ბრუნვის სიჩქარე
+            შემცირებულია 27-ჯერ, ხოლო შესაბამისად იზრდება ბრუნვის ძალა (თორქი).
+            ასეთი გადაბმულობა საშუალებას იძლევა რობოტმა მოახდინოს გადაადგილების
+            მაღალი სიზუსტით მართვა და უზრუნველყოს სტაბილური მუშაობა სხვადასხვა
+            ზედაპირზე, განსაკუთრებით მაშინ, როდესაც აუცილებელია დაბალი სიჩქარე
+            და მაღალი ბრუნვის ძალა.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
